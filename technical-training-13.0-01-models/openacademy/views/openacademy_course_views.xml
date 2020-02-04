@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ur.view" id="view_openacademy_course_tree">
+            <field name="name">view.openacademy.course.tree</field>
+            <field name="model">openacademy.course</field>
+            <field name="arch" type="xml">
+                <tree string="Courses">
+                    <field name="name"/>
+                    <field name="responsible_id"/>
+                    <field name="price"/>
+                    <field name="expire_date"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ur.view" id="view_openacademy_course_tree">
+            <field name="name">view.openacademy.course.tree</field>
+            <field name="model">openacademy.course</field>
+            <field name="arch" type="xml">
+                <form string="Courses">
+                    
+                    <sheet>
+                        <group>
+                    <field name="name"/>
+                    <field name="responsible_id"/>
+                    <field name="price"/>
+                    <field name="expire_date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
