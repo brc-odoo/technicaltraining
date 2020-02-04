@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
+        
         <record model="ir.ur.view" id="view_openacademy_course_tree">
             <field name="name">view.openacademy.course.tree</field>
             <field name="model">openacademy.course</field>
@@ -8,27 +9,33 @@
                 <tree string="Courses">
                     <field name="name"/>
                     <field name="responsible_id"/>
-                    <field name="price"/>
+                    <field name="price" optional="hide"/>
+                    <field name="responsible_id"/>
                     <field name="expire_date"/>
                 </tree>
             </field>
         </record>
+        
         <record model="ir.ur.view" id="view_openacademy_course_tree">
             <field name="name">view.openacademy.course.tree</field>
             <field name="model">openacademy.course</field>
             <field name="arch" type="xml">
                 <form string="Courses">
-                    
                     <sheet>
-                        <group>
-                    <field name="name"/>
-                    <field name="responsible_id"/>
-                    <field name="price"/>
-                    <field name="expire_date"/>
-                        </group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="price" optional="hide"/>
+                        <field name="responsible_id"/>
+                        <field name="expire_date"/>
                     </sheet>
                 </form>
             </field>
         </record>
+        <record model="ir.actions.act_window" id="action_openacademy_views">
+            <field name="name">Courses</field>
+            <field name="res_model">openacademy.course</field>
+            <field name="view">tree.form</field>
+        </record>
+        
     </data>
 </odoo>
