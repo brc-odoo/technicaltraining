@@ -27,8 +27,11 @@
     'data':        [
         "security/ir.model.access.csv",
         "data/openacademy_data.xml",
+        "views/openacademy_course_views.xml",
     ],
     # only loaded in demonstration mode
-    'demo':        [],
+    'demo':        [
+        "demo/openacademy_course_demo.xml",
+    ],
     'license': 'AGPL-3',
 }
