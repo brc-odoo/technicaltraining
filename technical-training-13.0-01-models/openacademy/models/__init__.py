@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-import . from course
+from . import course
