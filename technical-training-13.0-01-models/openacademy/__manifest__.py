@@ -21,16 +21,18 @@
     'version':     '0.1',
 
     # any module necessary for this one to work correctly
-    'depends':     ['base'],
+    'depends':     ['contacts'],
 
     # always loaded
     'data':        [
         "data/openacademy_data.xml",
         "views/openacademy_course_views.xml",
+        "views/res_partner_views.xml",
+        "views/openacademy_session_views.xml"
     ],
     # only loaded in demonstration mode
     'demo':        [
-        "demo/openacademy_course_demo.xml",
+#         "demo/openacademy_course_demo.xml",
     ],
     'license': 'AGPL-3',
 }
