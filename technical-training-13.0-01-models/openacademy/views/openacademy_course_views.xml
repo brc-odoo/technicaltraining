@@ -31,16 +31,12 @@
                 </form>
             </field>
         </record> -->
-<!--         <record model="ir.actions.act_window" id="action_openacademy_views">
+        <record model="ir.actions.act_window" id="action_openacademy_views">
             <field name="name">Courses</field>
             <field name="res_model">openacademy.course</field>
             <field name="view_mode">tree.form</field>
-            <field name="view_id"></field>
-            <field name=""></field>
-            <field name=""></field>
-            <field name=""></field>
-            <field name=""></field>
+            <field name="view_id" ref="openacademy.view_openacademy_course_tree_normal"/>
         </record>
-         -->
+        
     </data>
 </odoo>
