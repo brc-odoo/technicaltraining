@@ -16,7 +16,7 @@
             </field>
         </record>
         
-<!--         <record model="ir.ur.view" id="view_openacademy_course_tree">
+<!--         <record model="ir.ui.view" id="view_openacademy_course_tree">
             <field name="name">view.openacademy.course.tree</field>
             <field name="model">openacademy.course</field>
             <field name="arch" type="xml">
