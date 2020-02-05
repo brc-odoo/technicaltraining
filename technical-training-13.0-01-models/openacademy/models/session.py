@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from odoo import models, fields, api, constrains, _
 
     
 class OpenAcademySession(models.Model):
@@ -29,3 +29,14 @@ class OpenAcademySession(models.Model):
                             ('cancel', 'Cancelled'),
                             ('done', 'Done'),
                         ])
+    _sql_coonstraints = {
+        ('openacademy_Session_unique_code', 'UNIQUE (code)', 'Code must be unique !'),
+    }
+    @api.constrains('start_date', 'end_date')
+    def _check_dates(self):
+        for session in self:
+            if session.start_date > session.end_date:
+                raise exceptions.ValidationError(_('Start date "%s" can not be after end date "%s"')%(session.start_date, session.end_date))
+    @api.model_create_multi
+    def create(self, vals_list):
+        _logger.warining('*'*)
