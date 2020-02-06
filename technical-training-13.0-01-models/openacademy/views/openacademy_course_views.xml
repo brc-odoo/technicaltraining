@@ -6,7 +6,7 @@
        <record id="view_openacademy_course_tree_normal" model="ir.ui.view">
             <field name="name">view.openacademy.course.tree</field>
             <field name="model">openacademy.course</field>
-           <field name="priority">16</field>
+            <field name="priority">16</field>
             <field name="arch" type="xml">
                 <tree string="Courses">
                     <field name="name"/>
@@ -21,7 +21,7 @@
        <record id="view_openacademy_course_tree" model="ir.ui.view">
             <field name="name">view.openacademy.course.tree</field>
             <field name="model">openacademy.course</field>
-           <field name="priority">16</field>
+            <field name="priority">16</field>
             <field name="arch" type="xml">
                 <tree string="Courses" editable="top">
                     <field name="name"/>
@@ -68,6 +68,7 @@
            <field name="view_id" ref="view_openacademy_course_tree_normal"/>
            <field name="act_window_id" ref="action_openacademy_views"/>
         </record>
+        
         <record model="ir.actions.act_window.view" id="action_openacademy_views_form">
            <field name="sequence" eval="2"/>
            <field name="view_mode">form</field>
