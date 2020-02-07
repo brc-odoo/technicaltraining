@@ -25,14 +25,15 @@
 
     # always loaded
     'data':        [
-#         "data/openacademy_data.xml",
+        "views/openacademy_menu_views.xml",
         "views/openacademy_course_views.xml",
         "views/openacademy_session_views.xml",
-        "views/res_partner_views.xml",
+        "views/openacademy_attendees_views.xml",
+        "views/res_partner_views.xml"
+
     ],
     # only loaded in demonstration mode
     'demo':        [
-#         "demo/openacademy_course_demo.xml",
     ],
     'license': 'AGPL-3',
 }
